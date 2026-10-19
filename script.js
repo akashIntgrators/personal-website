@@ -54,3 +54,65 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
 
   revealItems.forEach((item) => observer.observe(item));
 }
+
+// Expertise highlights: native touch/trackpad scroll, arrows, dots and keyboard.
+(() => {
+  const track = document.querySelector('.expertise-track');
+  if (!track) return;
+  const slides = Array.from(track.children);
+  const controls = document.querySelector('.expertise-controls');
+  const prev = controls.querySelector('[data-carousel-prev]');
+  const next = controls.querySelector('[data-carousel-next]');
+  const dots = Array.from(controls.querySelectorAll('[data-carousel-dot]'));
+  const status = controls.querySelector('[data-carousel-status]');
+  let current = 0;
+  slides.forEach((slide, i) => {
+    const config = window.expertiseMedia?.[i] || {};
+    const slot = slide.querySelector('.expertise-media');
+    if (config.type === 'animation') {
+      const illustration = document.createElement('div');
+      illustration.className = 'smart-animation'; illustration.setAttribute('aria-hidden','true');
+      illustration.innerHTML = '<div class="smart-house"><span></span><span></span></div>';
+      slot.append(illustration);
+    } else if (config.type === 'video') {
+      const video = document.createElement('video');
+      video.src = config.src; video.poster = config.poster || '';
+      video.controls = true; video.playsInline = true; video.preload = 'none';
+      video.setAttribute('aria-label',config.alt || 'Service video');
+      slot.append(video);
+    } else if (config.src) {
+      const img = document.createElement('img');
+      img.src = config.type === 'gif' && reducedMotion ? (config.poster || '') : config.src;
+      img.alt = config.alt || ''; img.loading = 'lazy'; img.decoding = 'async';
+      if (img.getAttribute('src')) slot.append(img);
+    }
+  });
+  const go = index => {
+    index = Math.max(0,Math.min(slides.length-1,index));
+    const offset = slides[index].getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
+    track.scrollTo({left:offset,behavior:reducedMotion ? 'auto':'smooth'});
+  };
+  const update = () => {
+    const left = track.getBoundingClientRect().left;
+    current = slides.reduce((best,slide,i) => Math.abs(slide.getBoundingClientRect().left-left) < Math.abs(slides[best].getBoundingClientRect().left-left) ? i : best,0);
+    // The final slide may be clamped to the track's right edge.
+    if (track.scrollLeft >= track.scrollWidth-track.clientWidth-2) current=slides.length-1;
+    dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===current)));
+    prev.disabled=current===0; next.disabled=current===slides.length-1;
+    status.textContent=slides[current].getAttribute('aria-label');
+    slides.forEach((slide,i)=>{if(i!==current)slide.querySelectorAll('video').forEach(video=>video.pause());});
+  };
+  controls.hidden=false;
+  prev.addEventListener('click',()=>go(current-1)); next.addEventListener('click',()=>go(current+1));
+  dots.forEach((dot,i)=>dot.addEventListener('click',()=>go(i)));
+  track.addEventListener('keydown',event=>{
+    if(event.target!==track)return;
+    if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) {
+      event.preventDefault(); go(event.key==='Home'?0:event.key==='End'?slides.length-1:current+(event.key==='ArrowRight'?1:-1));
+    }
+  });
+  let timer;
+  track.addEventListener('scroll',()=>{clearTimeout(timer);timer=setTimeout(update,100);},{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
