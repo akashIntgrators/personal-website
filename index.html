@@ -11,7 +11,7 @@
   <meta property="og:description" content="A clean, responsive concept for a more confident and useful construction experience.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/logo.avif" type="image/avif">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=highlights-2">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -73,32 +73,25 @@
     </section>
 
     <section class="expertise section-pad" id="expertise" aria-labelledby="expertise-title">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-kicker">One team. Every layer.</p>
-          <h2 id="expertise-title">From the first line to the final detail.</h2>
-        </div>
-        <p>Four disciplines work as one, reducing hand-offs and keeping every decision connected to the home you set out to build.</p>
-      </div>
-
+      <div class="section-heading"><div><p class="section-kicker">One team. Every layer.</p><h2 id="expertise-title">Every detail.<br>One vision.</h2></div><p>Explore architecture, construction, interiors and smart living.</p></div>
       <div class="expertise-carousel" role="region" aria-roledescription="carousel" aria-label="Our expertise">
-        <p class="carousel-hint">Explore our expertise <span aria-hidden="true">↔</span></p>
+        <p class="carousel-hint">Swipe to explore <span aria-hidden="true">↔</span></p>
         <div class="expertise-track" id="expertise-track" tabindex="0" aria-label="Swipe or use the arrow keys to explore services">
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="1 of 4: Architecture">
             <div class="expertise-media" data-service-media="0"></div>
-            <div class="expertise-caption"><span class="expertise-label">01 / Architecture</span><h3>Plans shaped around your life.</h3><p>Modern plans, elevations and engineering considered together, from the very first line.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">01 / Architecture</span><h3>Designed around you.</h3><p>Modern plans, elevations and engineering considered together, from the very first line.</p></div>
           </article>
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Construction">
             <div class="expertise-media" data-service-media="1"></div>
-            <div class="expertise-caption"><span class="expertise-label">02 / Construction</span><h3>Built with care. Delivered together.</h3><p>One coordinated build team, with a clear scope and attention to every detail.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">02 / Construction</span><h3>Built to last.</h3><p>One coordinated build team, with a clear scope and attention to every detail.</p></div>
           </article>
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Interiors">
             <div class="expertise-media" data-service-media="2"></div>
-            <div class="expertise-caption"><span class="expertise-label">03 / Interiors</span><h3>Spaces that feel like you.</h3><p>Kitchens, lighting, finishes and furniture designed as part of the whole home.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">03 / Interiors</span><h3>Made for living.</h3><p>Kitchens, lighting, finishes and furniture designed as part of the whole home.</p></div>
           </article>
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Smart living">
             <div class="expertise-media" data-service-media="3"></div>
-            <div class="expertise-caption"><span class="expertise-label">04 / Smart living</span><h3>A home that works with you.</h3><p>Security, lighting and automation integrated into everyday living.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">04 / Smart living</span><h3>Connected. Effortlessly.</h3><p>Security, lighting and automation integrated into everyday living.</p></div>
           </article>
         </div>
         <div class="expertise-controls" hidden>
@@ -110,6 +103,7 @@
             <button type="button" data-carousel-dot="3" aria-label="Show Smart living" aria-controls="expertise-track" aria-current="false"><span></span></button>
           </div>
           <button type="button" data-carousel-next aria-label="Next service" aria-controls="expertise-track">→</button>
+          <button type="button" data-carousel-play aria-label="Play highlights" aria-pressed="false">▶</button>
           <span class="sr-only" data-carousel-status aria-live="polite">Architecture, 1 of 4</span>
         </div>
       </div>
@@ -242,7 +236,7 @@
     </div>
   </footer>
 
-  <script src="service-media.js"></script>
-  <script src="script.js" defer></script>
+  <script src="service-media.js?v=highlights-2"></script>
+  <script src="script.js?v=highlights-2" defer></script>
 </body>
 </html>
