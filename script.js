@@ -66,20 +66,6 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   const dots = Array.from(controls.querySelectorAll('[data-carousel-dot]'));
   const status = controls.querySelector('[data-carousel-status]');
   let current = 0;
-  const play = controls.querySelector('[data-carousel-play]');
-  let autoplay = null;
-  const stop = () => { clearInterval(autoplay); autoplay=null; if(play){play.textContent='▶';play.setAttribute('aria-pressed','false');play.setAttribute('aria-label','Play highlights');} };
-  play?.addEventListener('click',()=>{
-    if(autoplay){stop();return;}
-    play.textContent='Ⅱ';play.setAttribute('aria-pressed','true');play.setAttribute('aria-label','Pause highlights');
-    autoplay=setInterval(()=>go((current+1)%slides.length),6000);
-  });
-  track.addEventListener('touchstart',stop,{passive:true});
-  track.addEventListener('pointerdown',stop);
-  track.addEventListener('keydown',stop);
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
-  if('IntersectionObserver' in window) new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)stop();}).observe(track);
-
   slides.forEach((slide, i) => {
     const config = window.expertiseMedia?.[i] || {};
     const slot = slide.querySelector('.expertise-media');
@@ -103,8 +89,7 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   });
   const go = index => {
     index = Math.max(0,Math.min(slides.length-1,index));
-    const inset = parseFloat(getComputedStyle(track).scrollPaddingLeft) || 0;
-    const offset = slides[index].getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft - inset;
+    const offset = slides[index].getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
     track.scrollTo({left:offset,behavior:reducedMotion ? 'auto':'smooth'});
   };
   const update = () => {
@@ -118,8 +103,8 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
     slides.forEach((slide,i)=>{if(i!==current)slide.querySelectorAll('video').forEach(video=>video.pause());});
   };
   controls.hidden=false;
-  prev.addEventListener('click',()=>{stop();go(current-1);}); next.addEventListener('click',()=>{stop();go(current+1);});
-  dots.forEach((dot,i)=>dot.addEventListener('click',()=>{stop();go(i);}));
+  prev.addEventListener('click',()=>go(current-1)); next.addEventListener('click',()=>go(current+1));
+  dots.forEach((dot,i)=>dot.addEventListener('click',()=>go(i)));
   track.addEventListener('keydown',event=>{
     if(event.target!==track)return;
     if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) {

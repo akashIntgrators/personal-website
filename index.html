@@ -11,7 +11,7 @@
   <meta property="og:description" content="A clean, responsive concept for a more confident and useful construction experience.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/logo.avif" type="image/avif">
-  <link rel="stylesheet" href="styles.css?v=highlights-2">
+  <link rel="stylesheet" href="styles.css?v=highlights-3">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -73,25 +73,32 @@
     </section>
 
     <section class="expertise section-pad" id="expertise" aria-labelledby="expertise-title">
-      <div class="section-heading"><div><p class="section-kicker">One team. Every layer.</p><h2 id="expertise-title">Every detail.<br>One vision.</h2></div><p>Explore architecture, construction, interiors and smart living.</p></div>
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">One team. Every layer.</p>
+          <h2 id="expertise-title">From the first line to the final detail.</h2>
+        </div>
+        <p>Four disciplines work as one, reducing hand-offs and keeping every decision connected to the home you set out to build.</p>
+      </div>
+
       <div class="expertise-carousel" role="region" aria-roledescription="carousel" aria-label="Our expertise">
-        <p class="carousel-hint">Swipe to explore <span aria-hidden="true">↔</span></p>
+        <p class="carousel-hint">Explore our expertise <span aria-hidden="true">↔</span></p>
         <div class="expertise-track" id="expertise-track" tabindex="0" aria-label="Swipe or use the arrow keys to explore services">
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="1 of 4: Architecture">
             <div class="expertise-media" data-service-media="0"></div>
-            <div class="expertise-caption"><span class="expertise-label">01 / Architecture</span><h3>Designed around you.</h3><p>Modern plans, elevations and engineering considered together, from the very first line.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">01 / Architecture</span><h3>Plans shaped around your life.</h3><p>Modern plans, elevations and engineering considered together, from the very first line.</p></div>
           </article>
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Construction">
             <div class="expertise-media" data-service-media="1"></div>
-            <div class="expertise-caption"><span class="expertise-label">02 / Construction</span><h3>Built to last.</h3><p>One coordinated build team, with a clear scope and attention to every detail.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">02 / Construction</span><h3>Built with care. Delivered together.</h3><p>One coordinated build team, with a clear scope and attention to every detail.</p></div>
           </article>
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Interiors">
             <div class="expertise-media" data-service-media="2"></div>
-            <div class="expertise-caption"><span class="expertise-label">03 / Interiors</span><h3>Made for living.</h3><p>Kitchens, lighting, finishes and furniture designed as part of the whole home.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">03 / Interiors</span><h3>Spaces that feel like you.</h3><p>Kitchens, lighting, finishes and furniture designed as part of the whole home.</p></div>
           </article>
           <article class="expertise-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Smart living">
             <div class="expertise-media" data-service-media="3"></div>
-            <div class="expertise-caption"><span class="expertise-label">04 / Smart living</span><h3>Connected. Effortlessly.</h3><p>Security, lighting and automation integrated into everyday living.</p></div>
+            <div class="expertise-caption"><span class="expertise-label">04 / Smart living</span><h3>A home that works with you.</h3><p>Security, lighting and automation integrated into everyday living.</p></div>
           </article>
         </div>
         <div class="expertise-controls" hidden>
@@ -103,49 +110,26 @@
             <button type="button" data-carousel-dot="3" aria-label="Show Smart living" aria-controls="expertise-track" aria-current="false"><span></span></button>
           </div>
           <button type="button" data-carousel-next aria-label="Next service" aria-controls="expertise-track">→</button>
-          <button type="button" data-carousel-play aria-label="Play highlights" aria-pressed="false">▶</button>
           <span class="sr-only" data-carousel-status aria-live="polite">Architecture, 1 of 4</span>
         </div>
       </div>
     </section>
 
-    <section class="approach" id="approach" aria-labelledby="approach-title">
-      <div class="approach-intro section-pad reveal">
-        <p class="section-kicker section-kicker-light">The approach</p>
-        <h2 id="approach-title">Clarity at every stage.</h2>
-        <p>Instead of a fragmented chain of vendors, the project moves through one connected process with visible decisions and a single point of coordination.</p>
-      </div>
-
-      <ol class="process-list section-pad">
-        <li class="process-item reveal">
-          <span class="process-number">01</span>
-          <div>
-            <h3>Discover</h3>
-            <p>Understand the site, ambitions, daily life, priorities and budget before drawing the answer.</p>
-          </div>
-        </li>
-        <li class="process-item reveal">
-          <span class="process-number">02</span>
-          <div>
-            <h3>Design</h3>
-            <p>Develop plans, structure, elevation, materials and interior intent as one coordinated system.</p>
-          </div>
-        </li>
-        <li class="process-item reveal">
-          <span class="process-number">03</span>
-          <div>
-            <h3>Build</h3>
-            <p>Translate the approved design into an accountable programme with quality checks and clear updates.</p>
-          </div>
-        </li>
-        <li class="process-item reveal">
-          <span class="process-number">04</span>
-          <div>
-            <h3>Complete</h3>
-            <p>Bring together finishes, interiors, automation and handover with the same attention to detail.</p>
-          </div>
-        </li>
-      </ol>
+    <section class="approach approach-highlights" id="approach" aria-labelledby="approach-title">
+      <div class="approach-heading"><p class="section-kicker section-kicker-light">The approach</p><h2 id="approach-title">Clarity at every stage.</h2><p>One connected process. From the first conversation to the final detail.</p></div>
+      <div class="approach-carousel" role="region" aria-roledescription="carousel" aria-label="Our process">
+        <p class="approach-hint">Swipe through the journey ↔</p>
+        <div class="approach-track" id="approach-track" tabindex="0" aria-label="Process highlights; use left and right arrows to explore">
+          <article class="approach-slide" role="group" aria-roledescription="slide" aria-label="1 of 4: Discover"><div class="approach-media" data-approach-media="0"><img src="assets/project-wide-1.avif" alt="" loading="lazy" decoding="async"></div><div class="approach-caption"><span>01 / Discover</span><h3>Start with your world.</h3><p>Understand the site, ambitions, daily life, priorities and budget before drawing the answer.</p></div></article>
+          <article class="approach-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Design"><div class="approach-media" data-approach-media="1"><img src="assets/project-wide-2.avif" alt="" loading="lazy" decoding="async"></div><div class="approach-caption"><span>02 / Design</span><h3>Bring the vision together.</h3><p>Develop plans, structure, elevation, materials and interior intent as one coordinated system.</p></div></article>
+          <article class="approach-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Build"><div class="approach-media" data-approach-media="2"><img src="assets/project-portrait-2.avif" alt="" loading="lazy" decoding="async"></div><div class="approach-caption"><span>03 / Build</span><h3>Turn plans into progress.</h3><p>Translate the approved design into an accountable programme with quality checks and clear updates.</p></div></article>
+          <article class="approach-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Complete"><div class="approach-media" data-approach-media="3"><img src="assets/project-wide-3.avif" alt="" loading="lazy" decoding="async"></div><div class="approach-caption"><span>04 / Complete</span><h3>Every detail, brought home.</h3><p>Bring together finishes, interiors, automation and handover with the same attention to detail.</p></div></article>
+        </div><div class="approach-controls" hidden><button type="button" data-step-prev aria-label="Previous stage" aria-controls="approach-track">←</button><div class="approach-dots" aria-label="Choose a stage">
+<button type="button" data-step-dot="0" aria-label="Show Discover" aria-current="true" aria-controls="approach-track"><span></span></button>
+<button type="button" data-step-dot="1" aria-label="Show Design" aria-current="false" aria-controls="approach-track"><span></span></button>
+<button type="button" data-step-dot="2" aria-label="Show Build" aria-current="false" aria-controls="approach-track"><span></span></button>
+<button type="button" data-step-dot="3" aria-label="Show Complete" aria-current="false" aria-controls="approach-track"><span></span></button>
+        </div><button type="button" data-step-next aria-label="Next stage" aria-controls="approach-track">→</button><button type="button" data-step-play aria-label="Play process highlights" aria-pressed="false">▶</button><span class="sr-only" data-step-status aria-live="polite">Discover, 1 of 4</span></div></div>
     </section>
 
     <section class="scope section-pad" aria-labelledby="scope-title">
@@ -236,7 +220,8 @@
     </div>
   </footer>
 
-  <script src="service-media.js?v=highlights-2"></script>
-  <script src="script.js?v=highlights-2" defer></script>
+  <script src="service-media.js?v=highlights-3"></script>
+  <script src="approach.js?v=highlights-3" defer></script>
+  <script src="script.js?v=highlights-3" defer></script>
 </body>
 </html>
