@@ -1,58 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Akash Ashok — techie, petrolhead, and maker. Explore practical DIY experiments, code, and opportunities to build together.">
-  <meta name="theme-color" content="#fafaf9">
-  <title>Techi with Helmet — Akash Ashok</title>
-  <style>
-    :root{--paper:#fafaf9;--ink:#202321;--muted:#656b66;--line:#e0e4df;--green:#365e49}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--green);outline-offset:6px}p{line-height:1.75}::selection{background:#dce8df}.wrap{width:min(1100px,calc(100% - 48px));margin:auto}
-    .skip{position:absolute;top:-60px;background:white;padding:12px;z-index:10}.skip:focus{top:8px}header{position:sticky;top:0;background:rgba(250,250,249,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);z-index:5}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:15px;font-weight:650;letter-spacing:-.4px;display:flex;align-items:center;gap:10px}.mark{width:28px;height:28px;border:1px solid var(--green);border-radius:50% 50% 7px 7px;display:grid;place-items:center;color:var(--green);font-size:11px;font-weight:600}.links{display:flex;gap:28px;font-size:13px;color:var(--muted)}.links a:hover{color:var(--green)}
-    .hero{padding:110px 0 100px}.eyebrow{text-transform:uppercase;font-size:11px;font-weight:650;letter-spacing:2px;color:var(--green);margin:0 0 24px}.hero h1{font-size:clamp(58px,8.5vw,108px);font-weight:600;letter-spacing:-.065em;line-height:1.02;margin:0 0 28px}.hero h1 span{display:block;color:#8a928a}.intro{font-size:20px;max-width:610px;color:var(--muted);margin:0}.actions{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:32px}.button{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;padding:14px 22px;border-radius:30px;font-size:14px;font-weight:550}.button:hover{background:var(--green)}.text-link{font-size:14px;color:var(--green);border-bottom:1px solid #bdccbf;padding-bottom:4px}.hero-foot{margin-top:64px;padding-top:23px;border-top:1px solid var(--line);display:flex;gap:32px;color:var(--muted);font-size:12px}
-    section{padding:80px 0}.about{background:#f0f2ee}.section-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:80px}h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.045em;line-height:1.15;font-weight:550;margin:0 0 24px}.about p{margin:0 0 20px;font-size:17px;color:#505851}.interests{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.interests span{font-size:12px;border:1px solid #d4dcd3;padding:9px 14px;border-radius:24px}.section-top{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:32px}.section-top p{max-width:380px;font-size:14px;color:var(--muted);margin:0 0 24px}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{min-height:285px;background:white;border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column}.card-number{font-size:12px;color:#929a92;margin-bottom:40px}.card h3{font-size:22px;letter-spacing:-.6px;font-weight:550;margin:0 0 12px}.card p{font-size:14px;color:var(--muted);margin:0 0 24px}.tag{align-self:start;margin-top:auto;font-size:11px;color:var(--green);background:#edf2ed;padding:7px 11px;border-radius:20px}.note{font-size:12px;color:var(--muted);margin-top:20px}.collab{padding:20px 0 85px}.panel{background:#e8eee7;border-radius:24px;padding:64px;display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:center}.panel h2{margin-bottom:0}.panel p{color:#505b51;font-size:16px;margin:0 0 25px}footer{border-top:1px solid var(--line);padding:27px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}
-    @media(max-width:760px){.hero{padding:72px 0 60px}.intro{font-size:18px}.section-grid,.panel{grid-template-columns:1fr;gap:24px}.projects{grid-template-columns:1fr}.section-top{display:block}.section-top p{max-width:100%}.card{min-height:230px}.card-number{margin-bottom:26px}section{padding:58px 0}.panel{padding:32px}.hero-foot{gap:18px;flex-wrap:wrap}.links{gap:16px}.collab{padding-bottom:55px}}
-    @media(max-width:420px){.wrap{width:calc(100% - 32px)}.nav{gap:12px}.brand{font-size:13px}.links{font-size:12px;gap:12px}.links .github-nav{display:none}.footer-inner{flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+  <title>Goldman’s Marshall’s — Homes, designed as one complete experience</title>
+  <meta name="description" content="A private website redesign concept for Goldman’s Marshall’s Construction Company, bringing architecture, construction, interiors and smart living into one clear experience.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#f5f1e9">
+  <meta property="og:title" content="Goldman’s Marshall’s — Website Redesign Concept">
+  <meta property="og:description" content="A clean, responsive concept for a more confident and useful construction experience.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.avif" type="image/avif">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header>
-    <nav class="wrap nav" aria-label="Main navigation">
-      <a class="brand" href="#main"><span class="mark" aria-hidden="true">TH</span>Techi with Helmet</a>
-      <div class="links"><a href="#about">About</a><a href="#projects">Projects</a><a class="github-nav" href="https://github.com/akashIntegrators">GitHub ↗</a></div>
-    </nav>
-  </header>
-  <main id="main">
-    <div class="wrap hero">
-      <p class="eyebrow">Akash Ashok · Code, curiosity &amp; the open road</p>
-      <h1>Techie by profession.<span>Petrolhead by hobby.</span></h1>
-      <p class="intro">I code for a living—and for the joy of building things. This is my little corner of the internet for practical ideas, DIY experiments, and the people who make them better.</p>
-      <div class="actions"><a class="button" href="#projects">Explore the projects <span aria-hidden="true">&nbsp;↗</span></a><a class="text-link" href="https://github.com/akashIntegrators">Find me on GitHub ↗</a></div>
-      <div class="hero-foot"><span>Built with curiosity.</span><span>Inspired by everyday life.</span><span>Better together.</span></div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Goldman’s Marshall’s home">
+        <img src="assets/logo.avif" width="254" height="282" alt="" class="brand-mark">
+        <span class="brand-name">Goldman’s<br>Marshall’s</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Open navigation</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#expertise">Expertise</a>
+          <a href="#approach">Approach</a>
+          <a href="#work">Selected work</a>
+          <a href="#about">About</a>
+          <a class="nav-cta" href="#contact">Start a conversation</a>
+        </div>
+      </nav>
     </div>
-    <section id="about" class="about">
-      <div class="wrap section-grid">
-        <div><p class="eyebrow">A little about me</p><h2>A builder’s mindset.<br>A rider’s spirit.</h2></div>
-        <div><p>I’m Akash. Writing code is both my profession and my favourite way to explore an idea. I enjoy working on tiny DIY projects that could solve the small problems we run into every day.</p><p>Away from the keyboard, long drives and motorcycle rides are my passion. Sometimes the best way to find a fresh perspective is to take the long way home.</p><div class="interests" aria-label="Interests"><span>Code &amp; automation</span><span>DIY experiments</span><span>Open source</span><span>Long drives &amp; rides</span></div></div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-pad" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Architecture · Construction · Interiors · Automation</p>
+        <h1 id="hero-title">Homes, designed as one complete experience.</h1>
+        <p class="hero-lede">Goldman’s Marshall’s brings design, engineering, construction, interiors and smart-home integration under one accountable team.</p>
+        <div class="button-row">
+          <a class="button button-dark" href="#contact">Start your home</a>
+          <a class="text-link" href="#approach">See how we work <span aria-hidden="true">↘</span></a>
+        </div>
+        <ul class="hero-notes" aria-label="Key service qualities">
+          <li>Turnkey delivery</li>
+          <li>In-house expertise</li>
+          <li>Clear project scope</li>
+        </ul>
+      </div>
+
+      <figure class="hero-media reveal reveal-late">
+        <img src="assets/project-wide-2.avif" width="1277" height="720" alt="Contemporary villa design from the Goldman’s Marshall’s project gallery" fetchpriority="high">
+        <figcaption>
+          <span>Private redesign concept</span>
+          <span>01 / Bengaluru</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="manifesto section-pad" aria-labelledby="manifesto-title">
+      <p class="section-kicker reveal">A clearer kind of construction</p>
+      <h2 id="manifesto-title" class="statement reveal">The best homes feel effortless. Building one should feel considered, transparent and precise.</h2>
+    </section>
+
+    <section class="expertise section-pad" id="expertise" aria-labelledby="expertise-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">One team. Every layer.</p>
+          <h2 id="expertise-title">From the first line to the final detail.</h2>
+        </div>
+        <p>Four disciplines work as one, reducing hand-offs and keeping every decision connected to the home you set out to build.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card service-card-featured reveal">
+          <span class="card-index">01</span>
+          <div>
+            <h3>Architecture</h3>
+            <p>Modern plans, elevations and engineering shaped around the site, the family and the way each space will be lived in.</p>
+          </div>
+          <svg aria-hidden="true" viewBox="0 0 120 120" class="line-icon">
+            <path d="M19 101V53L60 19l41 34v48M39 101V68h42v33M19 54h82" />
+          </svg>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="card-index">02</span>
+          <div>
+            <h3>Construction</h3>
+            <p>Structural expertise, premium materials and one coordinated build team focused on quality, visibility and accountable delivery.</p>
+          </div>
+          <span class="card-tag">Build</span>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="card-index">03</span>
+          <div>
+            <h3>Interiors</h3>
+            <p>Purposeful kitchens, wardrobes, lighting, finishes and furniture planned as part of the home—not added as an afterthought.</p>
+          </div>
+          <span class="card-tag">Live</span>
+        </article>
+
+        <article class="service-card service-card-dark reveal">
+          <span class="card-index">04</span>
+          <div>
+            <h3>Smart living</h3>
+            <p>Integrated security, lighting and automation designed to feel natural, efficient and ready for the years ahead.</p>
+          </div>
+          <span class="card-tag">Connect</span>
+        </article>
       </div>
     </section>
-    <section id="projects" class="wrap">
-      <div class="section-top"><div><p class="eyebrow">The workbench</p><h2>Small projects.<br>Everyday possibilities.</h2></div><p>A space for the things I’m building, learning, and figuring out along the way.</p></div>
-      <!-- Replace these topic placeholders with approved public projects.
-           Future Notion sync should publish only explicitly approved public fields.
-           Never include a Notion token in this HTML or browser JavaScript. -->
-      <div class="projects">
-        <article class="card"><span class="card-number">01 / CODE</span><h3>Useful little tools.</h3><p>Interactive Python tools for everyday tasks. Project details and demos will appear here as they’re ready to share.</p><span class="tag">Updates coming soon</span></article>
-        <article class="card"><span class="card-number">02 / MAKE</span><h3>Ideas made practical.</h3><p>Small DIY experiments with a simple ambition: turn an everyday problem into something useful.</p><span class="tag">Updates coming soon</span></article>
-        <article class="card"><span class="card-number">03 / AUTOMATE</span><h3>A little less repetitive.</h3><p>A home for future bots and automation experiments. More to share once the first ideas take shape.</p><span class="tag">Ideas ahead</span></article>
+
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="approach-intro section-pad reveal">
+        <p class="section-kicker section-kicker-light">The approach</p>
+        <h2 id="approach-title">Clarity at every stage.</h2>
+        <p>Instead of a fragmented chain of vendors, the project moves through one connected process with visible decisions and a single point of coordination.</p>
       </div>
-      <p class="note">These are project categories for now. Individual projects and their progress will be added here.</p>
+
+      <ol class="process-list section-pad">
+        <li class="process-item reveal">
+          <span class="process-number">01</span>
+          <div>
+            <h3>Discover</h3>
+            <p>Understand the site, ambitions, daily life, priorities and budget before drawing the answer.</p>
+          </div>
+        </li>
+        <li class="process-item reveal">
+          <span class="process-number">02</span>
+          <div>
+            <h3>Design</h3>
+            <p>Develop plans, structure, elevation, materials and interior intent as one coordinated system.</p>
+          </div>
+        </li>
+        <li class="process-item reveal">
+          <span class="process-number">03</span>
+          <div>
+            <h3>Build</h3>
+            <p>Translate the approved design into an accountable programme with quality checks and clear updates.</p>
+          </div>
+        </li>
+        <li class="process-item reveal">
+          <span class="process-number">04</span>
+          <div>
+            <h3>Complete</h3>
+            <p>Bring together finishes, interiors, automation and handover with the same attention to detail.</p>
+          </div>
+        </li>
+      </ol>
     </section>
-    <section class="collab" aria-labelledby="collab-title"><div class="wrap panel"><div><p class="eyebrow">An open invitation</p><h2 id="collab-title">Good ideas get better<br>with good company.</h2></div><div><p>Have an idea, a useful suggestion, or a better way to solve a problem? I’d love to collaborate with fellow makers and developers to make our DIY projects more robust—and contribute back to open source.</p><a class="button" href="https://github.com/akashIntegrators">Let’s connect on GitHub ↗</a></div></div></section>
+
+    <section class="scope section-pad" aria-labelledby="scope-title">
+      <div class="scope-copy reveal">
+        <p class="section-kicker">Scope before surprises</p>
+        <h2 id="scope-title">A detailed proposal, not a vague estimate.</h2>
+        <p>The current package documents architecture, structure, services, materials, interiors, automation and amenities. Before launch, pricing and every stated inclusion should be dated and confirmed.</p>
+        <a class="button button-outline" href="https://www.goldmansmarshalls.com/_files/ugd/353424_870b653ad8c1424fb4f1bc641dae7517.pdf" target="_blank" rel="noopener">Review the current proposal <span class="sr-only">(opens in a new tab)</span></a>
+      </div>
+      <div class="scope-panel reveal reveal-late" aria-label="Proposal qualities">
+        <p>Design</p>
+        <p>Engineering</p>
+        <p>Construction</p>
+        <p>Interiors</p>
+        <p>Automation</p>
+        <p>Amenities</p>
+      </div>
+    </section>
+
+    <section class="work section-pad" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2 id="work-title">Spaces made to be lived in.</h2>
+        </div>
+        <p>The current gallery contains strong project material. The production site should turn it into named case studies with scope, location, timeline and owner-approved photography.</p>
+      </div>
+
+      <div class="project-grid">
+        <figure class="project project-wide reveal">
+          <img src="assets/project-wide-1.avif" width="1058" height="588" alt="Contemporary residence from the Goldman’s Marshall’s project gallery" loading="lazy">
+          <figcaption><span>Residence study</span><span>Architecture · Exterior</span></figcaption>
+        </figure>
+        <figure class="project project-tall reveal">
+          <img src="assets/project-portrait-2.avif" width="479" height="846" alt="Residential construction in progress from the Goldman’s Marshall’s project gallery" loading="lazy">
+          <figcaption><span>Build study</span><span>Structure · Progress</span></figcaption>
+        </figure>
+        <figure class="project project-square reveal">
+          <img src="assets/project-wide-3.avif" width="776" height="588" alt="Modern home interior from the Goldman’s Marshall’s project gallery" loading="lazy">
+          <figcaption><span>Living study</span><span>Interior · Lighting</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about" aria-labelledby="about-title">
+      <div class="about-visual reveal" aria-hidden="true">
+        <div class="arch arch-one"></div>
+        <div class="arch arch-two"></div>
+        <div class="arch arch-three"></div>
+      </div>
+      <div class="about-copy reveal reveal-late">
+        <p class="section-kicker">Built on transparency</p>
+        <h2 id="about-title">Luxury should be felt in the thinking, not just the finish.</h2>
+        <p>Goldman’s Marshall’s describes its purpose as bringing honesty, precision and elegance to construction. This redesign makes that promise visible through simpler language, clearer proof and a calmer customer journey.</p>
+        <p class="validation-note"><strong>Before public launch:</strong> confirm the legal company name, current project figures, awards, package pricing, office locations, domain and contact details.</p>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy reveal">
+        <p class="section-kicker section-kicker-light">Begin with a conversation</p>
+        <h2 id="contact-title">Bring the ambition.<br>Build with clarity.</h2>
+      </div>
+      <div class="contact-actions reveal reveal-late">
+        <a class="contact-link" href="tel:+917676246810">
+          <span>Call</span>
+          <strong>+91 7676 246810</strong>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-link" href="mailto:sales@goldmansmarshalls.in">
+          <span>Email</span>
+          <strong>sales@goldmansmarshalls.in</strong>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <p class="contact-note">Contact details are reproduced from the current public website and require owner confirmation before launch.</p>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap footer-inner"><span>© 2026 Akash Ashok · Techi with Helmet</span><span>Keep building. Take the scenic route.</span></div></footer>
+
+  <footer class="site-footer section-pad">
+    <a class="brand brand-footer" href="#top" aria-label="Return to top">
+      <img src="assets/logo.avif" width="254" height="282" alt="" class="brand-mark">
+      <span class="brand-name">Goldman’s<br>Marshall’s</span>
+    </a>
+    <div class="footer-copy">
+      <p>Bengaluru, Karnataka</p>
+      <p>Private redesign concept · Not the production website</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
