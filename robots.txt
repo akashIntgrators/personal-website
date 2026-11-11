@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /
 Allow: /ads.txt
+Allow: /app-ads.txt$
 
 # The public homepage is self-contained. Give AdSense access to it for review.
 User-agent: Mediapartners-Google
@@ -9,3 +10,4 @@ Disallow: /
 Allow: /$
 Allow: /index.html$
 Allow: /ads.txt$
+Allow: /app-ads.txt$
